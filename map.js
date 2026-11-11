@@ -8,6 +8,7 @@ const mapa = L.map('mapa').setView(VYCHOZI_STRED, VYCHOZI_ZOOM);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">přispěvatelé OpenStreetMap</a>'
+    }).addTo(mapa);
 
 // Ochrana proti vložení HTML z dat
 function escapeHtml(text) {
