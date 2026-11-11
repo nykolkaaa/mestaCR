@@ -1,0 +1,91 @@
+:root {
+  --papir: #f5f6f2;
+  --inkoust: #1d2b2a;
+  --tlumena: #5d6b69;
+  --akcent: #1f6f6b;
+  --akcent-tmava: #14504d;
+  --ramecek: #d5dad6;
+  --chyba: #a3322b;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--inkoust);
+}
+
+body {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+}
+
+.panel {
+  background: var(--papir);
+  border-right: 1px solid var(--ramecek);
+  padding: 1.25rem;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.panel h1 {
+  margin: 0 0 1rem;
+  font-size: 1.35rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.seznam {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.seznam button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.7rem 0.8rem;
+  margin-bottom: 0.35rem;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.seznam button:hover { border-color: var(--ramecek); background: #fff; }
+.seznam button:focus-visible { outline: 2px solid var(--akcent); outline-offset: 1px; }
+.seznam button[aria-current="true"] { background: #fff; border-color: var(--akcent); }
+
+.seznam strong { display: block; font-weight: 600; }
+.seznam span {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.85rem;
+  color: var(--tlumena);
+  line-height: 1.35;
+}
+
+.chyba {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-left: 3px solid var(--chyba);
+  background: #fff;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--chyba);
+}
+
+#mapa { height: 100%; width: 100%; }
+
+.popup-nazev { margin: 0 0 0.3rem; font-size: 1.05rem; font-weight: 650; }
+.popup-popisek { margin: 0; line-height: 1.4; }
+
+@media (max-width: 700px) {
+  body { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
+  .panel { border-right: 0; border-bottom: 1px solid var(--ramecek); max-height: 35vh; }
+}
