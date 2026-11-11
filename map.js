@@ -5,13 +5,9 @@ const VYCHOZI_ZOOM = 7;
 
 const mapa = L.map('mapa').setView(VYCHOZI_STRED, VYCHOZI_ZOOM);
 
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-  subdomains: 'abcd',
-  maxZoom: 20,
-  attribution:
-    '&copy; <a href="https://www.openstreetmap.org/copyright">přispěvatelé OpenStreetMap</a> ' +
-    '&copy; <a href="https://carto.com/attributions">CARTO</a>'
-}).addTo(mapa);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">přispěvatelé OpenStreetMap</a>'
 
 // Ochrana proti vložení HTML z dat
 function escapeHtml(text) {
