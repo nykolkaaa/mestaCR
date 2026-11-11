@@ -24,6 +24,18 @@
         "type": "Point",
         "coordinates": [14.4378, 50.0755]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "nazev": "Závišice",
+        "popisek": "Závišice jsou obec v okrese Nový Jičín v Moravskoslezském kraji, 3 km severozápadně od Kopřivnice. Obcí protéká z jihu na sever řeka Sedlnička."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.1030072, 49.6132589]
+      }
     }
   ]
 }
